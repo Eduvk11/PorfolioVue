@@ -99,6 +99,10 @@ body {
 #menu a:hover {
     color: #41B883;
 }
+#menu .active{
+    color: #41B883;
+    text-decoration: underline 2px solid #41B883;
+}
 
 #slider {
     height: 350px;
@@ -341,6 +345,21 @@ textarea {
 .article-detail .subheader {
     margin-top: 15px;
     border: none;
+}
+
+.alert-danger-prov{
+    color: red;
+    font-weight: bold;
+}
+
+.alert-success-prov{
+    color: green;
+    font-weight: bold;
+}
+
+.alert-old-prov{
+    color: purple;
+    font-weight: bold;
 }
 
 /*RESPONSIVE*/
