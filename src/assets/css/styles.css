@@ -299,6 +299,7 @@ textarea {
 .article-item .image-wrap img {
     height: 100%;
     text-align: center;
+    width: 132px;
 }
 
 .article-item h2 {
@@ -360,6 +361,21 @@ textarea {
 .alert-old-prov{
     color: purple;
     font-weight: bold;
+}
+
+.yeargreen{
+    background: green !important;
+    color: white !important;
+    padding: 10px !important;
+    width: 111px !important;
+    text-align: center !important; 
+}
+.yearred {
+    background: red !important;
+    color: white !important;
+    padding: 10px !important;
+    width: 111px !important;
+    text-align: center !important;  
 }
 
 /*RESPONSIVE*/

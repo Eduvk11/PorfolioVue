@@ -1,21 +1,37 @@
 import { Params } from '@angular/router';
 <template>
-    <section id="content">
-        <h2 class="subheader">Pagina de pruebas</h2>
-        <h3>{{id_desde_url}} </h3>
-        <button @click="actualizarNombre()">Actualizar nombre</button>
-        <button @click="redirigirAlBlog()">ir al Blog</button>
-        <h4>{{nombre}}</h4>
+    <div class="general">
+        <Slider texto="Página de pruebas"></Slider>
+        <div class="center">
+            <section id="content">
+                <h2 class="subheader">Pagina de pruebas</h2>
+                <h3>{{id_desde_url}} </h3>
+                <button @click="actualizarNombre()">Actualizar nombre</button>
+                <button @click="redirigirAlBlog()">ir al Blog</button>
+                <h4>{{nombre}}</h4>
 
-        <!--Listado de articulos-->
-      
-    </section>
+                <!--Listado de articulos-->
+
+            </section>
+            <Sidebar></Sidebar>
+            <div class="clearfix"></div>
+        </div>
+    </div>
 
 </template>
 
 <script>
+    import Slider from './Slider';
+    import Sidebar from './Sidebar.vue';
+
 export default {
     name: 'Pagina',
+
+    components: {
+        Slider,
+        Sidebar,
+    },
+
     // Cilclos de vida del componente 'created'= Componente cargando
     created(){
         console.log('el componente se esta cargando');
