@@ -7,20 +7,23 @@
                     <div class="form-grup">
                         <label for="nombre">Nombre</label>
                         <input type="text" name="nombre" v-model="user.nombre">
-                        <span v-if="submitted && !$v.user.nombre.required">Este campo es requerido</span>
-                        <span v-if="submitted && !$v.user.nombre.minLength">Minimo dos caracteres</span>
+                        <div v-if="submitted && !$v.user.nombre.required">Este campo es requerido</div>
+                        <div v-if="submitted && !$v.user.nombre.minLength">Minimo dos caracteres</div>
+                      
                     </div>
                     <div class="form-grup">
                         <label for="nombre">Apellidos</label>
                         <input type="text" name="Apellidos" v-model="user.apellidos">
-                        <span v-if="submitted && !$v.user.apellidos.required">Este campo es requerido</span>
-                        <span v-if="submitted && !$v.user.apellidos.minLength">Minimo dos caracteres</span>
+                        <div v-if="submitted && !$v.user.apellidos.required">Este campo es requerido</div>
+                        <div v-if="submitted && !$v.user.apellidos.minLength">Minimo dos caracteres</div>
+                     
                     </div>
                     <div class="form-grup">
                         <label for="nombre">Biografia</label>
                         <textarea name="bio" v-model="user.bio"></textarea>
-                        <span v-if="submitted && !$v.user.bio.required">Este campo es requerido</span>
-                        <span v-if="submitted && !$v.user.bio.minLength">Minimo diez caracteres</span>
+                        <div v-if="submitted && !$v.user.bio.required">Este campo es requerido</div>
+                        <div v-if="submitted && !$v.user.bio.minLength">Minimo diez caracteres</div>
+                     
                     </div>
                     <div class="form-grup radiobuttons">
                         <input type="radio" name="genero" value="Hombre" v-model="user.genero">Hombre
@@ -41,7 +44,7 @@
 </template>
 
 <script>
-import {required, minLength, alphaNum} from 'vuelidate';
+import {required, minLength} from 'vuelidate/lib/validators';
 import Sidebar from './Sidebar.vue';
 
 export default {
@@ -53,18 +56,15 @@ export default {
         user: {
              nombre:{
             required,
-            alphaNum,
-            minLength: 'minLength(2)'
+            minLength: minLength(2)
         },
          apellidos:{
             required,
-            alphaNum,
-            minLength: 'minLength(2)'
+            minLength: minLength(2)
         },
         bio:{
             required,
-            alphaNum,
-            minLength: 'minLength(10)'
+            minLength: minLength(10)
         },
         }
        

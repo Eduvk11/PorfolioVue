@@ -1,6 +1,6 @@
 <template>
     <aside id="sidebar">
-        <div id="nav-blog" class="sidebar-item">
+        <div id="nav-blog" class="sidebar-item" v-if="blog">
             <h3>Puedes hacer esto</h3>
             <a href="#" class="btn btn-success">Crear artículo</a>
         </div>
@@ -17,6 +17,7 @@
 
 <script>
 export default {
-    name: 'Sidebar'
+    name: 'Sidebar',
+    props: ['blog']
 }
 </script>

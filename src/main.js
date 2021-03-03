@@ -7,8 +7,12 @@ import Blog from './components/Blog.vue';
 import Formulario from './components/Formulario.vue';
 import Pagina from './components/Pagina.vue';
 import ErrorComponent from './components/ErrorComponent.vue';
-import MiComponente from './components/MiComponente.vue'
-import Peliculas from './components/Peliculas.vue'
+import MiComponente from './components/MiComponente.vue';
+import Peliculas from './components/Peliculas.vue';
+import VueMoment from 'vue-moment';
+import moment from 'moment';
+import 'moment/locale/es';
+
 
 
 
@@ -16,6 +20,8 @@ Vue.config.productionTip = false
 
 Vue.use(VueRouter);
 Vue.use(Vuelidate);
+Vue.use(VueMoment, {moment});
+
 
 const routes = [
   {path: '/', component: LastArticle},

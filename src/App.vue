@@ -1,7 +1,6 @@
 <template>
   <div id="app">
     <HeaderComponent></HeaderComponent>
-      <!--LastArticles></LastArticles-->
       <router-view></router-view>  
     <FooterComponent></FooterComponent>
   </div>
@@ -22,7 +21,5 @@
 </script>
 
 <style>
-
-@import './assets/css/styles.css';
-
+  @import './assets/css/styles.css';
 </style>

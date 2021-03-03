@@ -12,19 +12,8 @@
 
             <!--Listado de articulos-->
             <div id="articles">
-                <article class="article-item" id="article-template">
-                    <div class="image-wrap">
-                        <img src="https://www.paxinasgalegas.es/imagenes/camelle_img244245t0m0w800h400.jpg"
-                            alt="Camelle">
-                    </div>
-                    <h2>Articulo de prueba</h2>
-                    <span class="date">
-                        Hace 5 minutos
-                    </span>
-                    <a href="article.html">Leer más</a>
+                <Articles v-bind:articles="articles"></Articles>
 
-                    <div class="clearfix"></div>
-                </article>
             </div>
         </section>
         <Sidebar></Sidebar>
@@ -34,14 +23,44 @@
 </template>
 
 <script>
-  import Slider from './Slider'
-  import Sidebar from './Sidebar.vue'
+import Slider from './Slider';
+import Sidebar from './Sidebar.vue';
+import Articles from './Articles';
+import axios from 'axios';
+import Global from '../Global';
 
 export default {
     name: 'LastArticles',
     components: {
-      Slider,
-      Sidebar,
+        Slider,
+        Sidebar,
+        Articles
+  
+    },
+    mounted() {
+        this.getLastArticles();
+    },
+    data() {
+        return {
+            url: Global.url,
+            articles:[],
+        }
+    },
+    methods:{
+        getLastArticles(){
+            axios.get(this.url + 'articles/true')
+            .then(res => {
+                if(res.data.status === 'success'){
+                    this.articles = res.data.articles;
+
+                     console.log(this.articles);
+                }
+               
+            });
+        }
     }
+    
 }
+        
+
 </script>

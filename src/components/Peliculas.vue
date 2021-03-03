@@ -74,7 +74,7 @@ export default {
             email: 'eduvk11@hotmail.com',
             favorita: null,
             peliculas: [
-                { title: 'Batman vs Superman', year: 2017, image: "https://hipertextual.com/files/2014/05/batman-vs-superman-dawn-of-justice.jpg?width=1200&enable=upscale" },
+                { title: 'Batman vs Superman', year: 2017, image: "https://pics.filmaffinity.com/Batman_v_Superman_El_amanecer_de_la_Justicia-728293826-large.jpg"},
                 { title: 'Spiderman', year: 2015, image: 'https://i.pinimg.com/originals/42/8c/7d/428c7dc836c7284f94e5cebc31c18574.jpg' },
                 { title: 'Los vengadores', year: 2016, image: 'https://lamanodelextranjero.files.wordpress.com/2019/05/los-vengadores-contra-thanos-en-infinity-war.jpg' },
                 { title: 'WonderWoman', year: 2020, image: 'http://es.web.img3.acsta.net/pictures/20/12/23/12/39/0017180.jpg' }
