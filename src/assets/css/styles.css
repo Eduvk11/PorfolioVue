@@ -293,7 +293,7 @@ textarea {
     overflow: hidden;
     float: left;
     margin-right: 15px;
-    border: 1px solid #ccc;
+  
 }
 
 .article-item .image-wrap img {
@@ -340,7 +340,7 @@ textarea {
 }
 
 .article-detail .image-wrap img {
-    width: 100%;
+    width: auto;
 }
 
 .article-detail .subheader {
