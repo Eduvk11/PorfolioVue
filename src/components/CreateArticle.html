@@ -1,0 +1,36 @@
+
+    <div class="general">
+       
+        <div class="center">
+            <section id="content">
+                <h1 class="subheader">Crear articulo</h1>
+
+                <form class="mid-form" @submit.prevent="save()">
+                    <div class="form-grup">
+                        <label for="title">Titulo</label>
+                        <input type="text" name="title" v-model="article.title">
+                        <div v-if="submitted && !$v.article.title.required">Este campo es requerido</div>
+                        <div v-if="submitted && !$v.article.title.minLength">Minimo dos caracteres</div>
+                    </div>
+                    <div class="form-grup">
+                        <label for="content">Contenido</label>
+                        <textarea name="content" v-model="article.content"></textarea>
+                        <div v-if="submitted && !$v.article.content.required">Este campo es requerido</div>
+                        <div v-if="submitted && !$v.article.content.minLength">Minimo diez caracteres</div>
+                    </div>
+                    <div class="form-grup"> 
+                        <label for="image">Imagen</label>
+                        <input type="file" name="file0" id="file" ref="file" @change="fileChange()" />
+                    </div>
+
+                    <div class="clearfix"></div>
+                    
+                    <input type="submit" value="Guardar" class="btn btn-success">
+                    
+                </form>
+
+            </section>
+            <Sidebar blog="true"></Sidebar>
+            <div class="clearfix"></div>
+        </div>
+    </div>
