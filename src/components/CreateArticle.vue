@@ -86,8 +86,6 @@ export default {
                                  this.article = res.data.article;
                                  this.$router.push('/blog');
                             }
-
-
                         }
                     })
                     .catch(error => {

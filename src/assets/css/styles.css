@@ -212,18 +212,40 @@ body {
 
 .btn-success {
     background: rgb(24, 150, 19);
+     color: white !important;
+    text-decoration: none !important;
+    text-align: center;
 }
 
 .btn-success:hover {
     background: black;
+     color: white !important;
+    text-decoration: none !important;
 }
 .btn-danger {
-    background: rgb(250, 2, 2);
+    background: rgb(218 82 82);
+    color: white !important;
+      text-align: center;
 }
 
 .btn-danger:hover {
-    background: black;
+    background-color: #f92604;
+     color: white !important;
+    text-decoration: none !important;
 }
+.btn-warning {
+    background: #e0a114; 
+     color: white !important;
+       text-align: center;
+     
+}
+
+.btn-warning:hover {
+    background: orange;
+     color: white;
+    text-decoration: none !important;
+}
+
 
 .mid-form {
     width: 60%;
@@ -350,6 +372,10 @@ textarea {
 
 .article-detail .image-wrap img {
     width: auto;
+}
+
+.image-small {
+    width: 150px;
 }
 
 .article-detail .subheader {
